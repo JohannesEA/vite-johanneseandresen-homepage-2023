@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap");
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  position: relative;
+  overflow: hidden;
+  &__content {
+    text-align: center;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideIn 0.5s ease-out 0.3s forwards;
+  }
+  &__image {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    animation: rotateIn 1s ease-out 0.5s forwards;
+  }
+  &__name {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+}
+
+// Keyframes for animations
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  0% {
+    transform: scale(0) rotate(-360deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
