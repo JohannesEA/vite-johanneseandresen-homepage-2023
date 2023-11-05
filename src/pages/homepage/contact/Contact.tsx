@@ -1,3 +1,4 @@
+import InfoCard from "../../../components/card/InfoCard";
 import "./Contact.scss";
 
 const contactDetails = [
@@ -24,10 +25,14 @@ const Contact = () => {
       <h2 className="contact__title">Kontakt</h2>
       <div className="contact__container">
         {contactDetails.map((detail) => (
-          <div key={detail.label} className="contact__card">
-            <span className="contact__card-label">{detail.label}</span>
-            <span className="contact__card-value">{detail.value}</span>
-          </div>
+          <InfoCard
+            key={detail.label}
+            label={detail.label}
+            value={detail.value}
+            onClick={() => {
+              alert(detail.label);
+            }}
+          />
         ))}
       </div>
     </section>

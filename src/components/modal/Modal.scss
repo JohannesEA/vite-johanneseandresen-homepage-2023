@@ -15,10 +15,11 @@
   background: var(--color-secondary);
   color: var(--color-primary);
   border-radius: 8px;
-  width: 90%;
-  max-width: 500px; // Maximum width of the modal
-  transform: translateY(100vh); // Start off screen
+  width: 90%; // make it flexible
+  max-width: 1280px; // maximum size
+  transform: translateY(100vh); // Start off-screen
   transition: transform 0.3s ease-out;
+  min-height: 80vh;
 }
 
 .modal-header {
@@ -44,18 +45,19 @@
   padding: 1rem;
 }
 
-// Small screen slide-up effect
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   .modal {
-    transform: none; // Reset to default position
+    transform: none;
     position: fixed;
-    bottom: 0; // Align to bottom
-    border-radius: 15px 15px 0 0; // Only round the top corners
+    bottom: 0;
+    border-radius: 15px 15px 0 0;
     transition: transform 0.3s ease-out;
+    width: 100%; // full width on small screens
+    min-height: 90vh;
+    max-width: none; // remove max-width constraint on smaller screens
   }
 }
 
-// When the modal is open, animate it into view
 .modal-overlay .modal {
-  transform: translateY(0); // Bring onto screen
+  transform: translateY(0); // This will bring the modal into view
 }

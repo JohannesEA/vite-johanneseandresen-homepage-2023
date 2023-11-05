@@ -3,23 +3,13 @@ import "./About.scss";
 import Modal from "../../../components/modal/Modal";
 import { AboutMeModalContent } from "./AboutMeModalContent";
 import { EducationModalContent } from "./EducationModalContent";
-
-interface AboutDetails {
-  label: string;
-  value: string;
-}
-
-const aboutDetails: AboutDetails[] = [
-  { label: "Alder", value: "26" },
-  { label: "Utdannelse", value: "Dataingeniør" },
-  { label: "Erfaring", value: "2 år som fullstack utvikler" },
-  { label: "Språk", value: "Norsk, Engelsk" },
-  {
-    label: "Programmeringsspråk",
-    value: "Kotlin, Java, Javascript, Typescript, Python",
-  },
-  { label: "Rammeverk", value: "React, Ktor, Firebase, React-native" },
-];
+import { ExperienceModalContent } from "./ExperienceModalContent";
+import LanguageModalContent from "./LanguageModalContent";
+import ProgrammingLanguageModalContent from "./ProgrammingLanguageModalContent";
+import FrameworkModalContent from "./FrameworkModalContent";
+import { AboutDetails, AboutLabels } from "../../../types";
+import { ABOUT_DETAILS } from "../../../development/data";
+import InfoCard from "../../../components/card/InfoCard";
 
 const About = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -27,35 +17,45 @@ const About = () => {
     null
   );
 
-  const getAboutModalContet = (label: string) => {
-    if (label === "Alder") {
-      return <AboutMeModalContent />;
+  const getAboutModalContent = (label: AboutLabels) => {
+    switch (label) {
+      case AboutLabels.Age:
+        return <AboutMeModalContent />;
+      case AboutLabels.Experience:
+        return <ExperienceModalContent />;
+      case AboutLabels.Education:
+        return <EducationModalContent />;
+      case AboutLabels.Languages:
+        return <LanguageModalContent />;
+      case AboutLabels.ProgrammingLanguages:
+        return <ProgrammingLanguageModalContent />;
+      case AboutLabels.Frameworks:
+        return <FrameworkModalContent />;
+      default:
+        return <FrameworkModalContent />;
     }
-    return <EducationModalContent />;
   };
 
   return (
     <section className="about">
-      <h2 className="about__title">Om</h2>
-
       <img
-        src={"src/assets/logo.png"}
+        src="src/assets/johannes.jpeg"
         alt="Johannes Erdahl Andresen"
         className="about__image"
       />
+
+      <h2 className="about__title">Johannes Erdahl Andresen</h2>
       <div className="about__container">
-        {aboutDetails.map((detail) => (
-          <div
+        {ABOUT_DETAILS.map((detail) => (
+          <InfoCard
+            key={detail.label}
+            label={detail.label}
+            value={detail.value}
             onClick={() => {
               setSelectedDetails(detail);
               setShowModal(true);
             }}
-            key={detail.label}
-            className="about__card"
-          >
-            <span className="about__card-label">{detail.label}</span>
-            <span className="about__card-value">{detail.value}</span>
-          </div>
+          />
         ))}
       </div>
 
@@ -63,7 +63,9 @@ const About = () => {
         title={selectedDetails?.label}
         isOpen={showModal}
         onClose={() => setShowModal(!showModal)}
-        children={getAboutModalContet(selectedDetails?.label || "")}
+        children={getAboutModalContent(
+          selectedDetails?.label || AboutLabels.Age
+        )}
       />
     </section>
   );
