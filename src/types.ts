@@ -12,7 +12,7 @@ export interface ColorColumnProps {
 }
 
 export enum AboutLabels {
-    Age = "Alder",
+    Age = "Om meg",
     Education = "Utdannelse",
     Experience = "Erfaring",
     Languages = "Språk",

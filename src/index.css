@@ -4,15 +4,15 @@
 }
 
 :root {
-  --color-primary: #80adbf;
+  --color-primary: #f2f2f2;
   /* Light blue */
-  --color-secondary: #070c0d;
+  --color-secondary: #010626;
   /* Almost black */
-  --color-tertiary: #4a808c;
+  --color-tertiary: #465e73;
   /* Medium blue */
-  --color-quaternary: #225459;
+  --color-quaternary: #465e73;
   /* Darker blue */
-  --color-quinary: #14261b;
+  --color-quinary: #010440;
   /* Dark green */
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

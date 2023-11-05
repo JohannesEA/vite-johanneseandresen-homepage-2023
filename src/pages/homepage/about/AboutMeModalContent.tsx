@@ -2,14 +2,16 @@ export const AboutMeModalContent = () => {
   return (
     <div>
       <h3 className="about__card-label">Om meg</h3>
-      <p className="about__card-value">
-        Jeg ble født ved St.Olavs hospital den 4. september 1997. De første fire
-        årene av livet mitt bodde jeg ved Ørlandet, en halvøy utenfor Trondheim.
-        Da jeg var fire år, flyttet jeg og familien min til Asker. Der bodde jeg
-        frem til jeg tjenestegjorde i militæret, hvorpå jeg flyttet tilbake til
-        Trondheim og deretter Oslo for å studere. Per dags dato bor og jobber
-        jeg i Oslo.
+      <p className="about__modal-content">
+        Jeg er en 26 år gammel mann som brenner for teknologi og utvikling. Som
+        fullstack-utvikler hos Eika får jeg utnyttet mine ferdigheter og lærer
+        nye ting hver dag. Men det stopper ikke på kontoret - jeg har alltid et
+        par sideprosjekter på gang som holder meg skjerpet og engasjert.
       </p>
+
+      <a href="https://github.com/JohannesEA" className="about__button">
+        Github
+      </a>
     </div>
   );
 };

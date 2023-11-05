@@ -3,8 +3,7 @@
   padding: 20px; // Add some padding around the content
   border-radius: 8px; // Optional: round the corners
   min-height: 450px;
-  background-color: #f5f5f5; // A light background color
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Optional: add a subtle shadow
+  background-color: var(--color-primary); // A light background color
   &__title {
     margin-bottom: 12px; // Space between the title and the image
     font-size: 1.2em;

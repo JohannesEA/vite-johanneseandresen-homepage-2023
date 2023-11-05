@@ -10,7 +10,7 @@
   word-wrap: break-word; // Ensures text breaks onto next line
   &:hover {
     transform: translateY(-5px);
-    background: var(--color-tertiary);
+    background: rgb(236, 236, 236);
   }
   &__label {
     font-weight: bold;

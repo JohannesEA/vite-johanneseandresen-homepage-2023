@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
         </div>
       ) : (
         <>
-          <Hamburger toggled={isOpen} toggle={setOpen} />
+          <Hamburger toggled={isOpen} toggle={setOpen} color="#f2f2f2" />
           <div
             className={`navbar__links-container--active ${
               isOpen ? "is-open" : ""

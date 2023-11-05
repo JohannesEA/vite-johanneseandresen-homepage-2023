@@ -7,7 +7,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 20vh;
   font-family: var(--font-family-base);
   &__title {
     color: var(--color-primary);
@@ -20,30 +19,6 @@
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1rem;
     text-align: center;
-  }
-  &__card {
-    background: var(--color-primary);
-    color: var(--color-secondary);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-    &:hover {
-      transform: translateY(-5px);
-      background: var(--color-tertiary);
-    }
-    &-label {
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    &-value {
-      margin-bottom: 0.5rem;
-    }
   }
   &__icon {
     width: 40px;
@@ -70,8 +45,5 @@
   }
   .contact__container {
     grid-template-columns: 1fr;
-  }
-  .contact__card {
-    padding: 0.75rem;
   }
 }

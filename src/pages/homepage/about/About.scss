@@ -20,7 +20,6 @@
   font-family: var(--font-family-base);
   &__title {
     color: var(--color-primary);
-    margin-bottom: 24px;
   }
   &__container {
     max-width: 960px;
@@ -30,27 +29,6 @@
     gap: 1rem;
     text-align: center;
   }
-  &__card {
-    background: var(--color-primary);
-    color: var(--color-secondary);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-    &:hover {
-      transform: translateY(-5px);
-      background: var(--color-tertiary);
-    }
-    &-label {
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-    &-value {
-      display: block;
-    }
-  }
   &__image {
     width: 120px;
     height: 120px;
@@ -58,6 +36,38 @@
     margin-bottom: 2rem;
     object-fit: cover; // Maintains aspect ratio and covers the area without stretching the image
     object-position: center;
+  }
+  &__modal-content {
+    max-width: 500px;
+    margin: 48px auto;
+  }
+  &__button {
+    display: inline-block; // Allows setting padding and margins
+    padding: 0.75rem 1.5rem; // Sizeable padding for finger-friendly touch
+    margin-top: 1rem; // Spacing from the previous element
+    background-color: var(--color-primary); // Theme-based background color
+    color: var(
+      --color-secondary
+    ); // Text color that contrasts with the button background
+    text-align: center; // Center the text inside
+    text-decoration: none; // Remove underline from link
+    font-weight: 600; // Make the font a bit bolder
+    border-radius: 4px; // Rounded corners
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; // Smooth transition for hover effect
+    &:hover,
+    &:focus {
+      // Hover and focus states for interactivity
+      background-color: var(
+        --color-tertiary
+      ); // Change background color on hover
+      color: var(--color-primary); // Change text color on hover for contrast
+      text-decoration: none; // Maintain no underline on hover
+      outline: none; // Remove focus outline for a clean design
+    }
+    &:active {
+      // Clickable feedback
+      transform: translateY(2px); // Slight move down to mimic button press
+    }
   }
 }
 

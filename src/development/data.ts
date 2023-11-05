@@ -1,10 +1,11 @@
 import { AboutDetails, AboutLabels, ColorColumnProps, SwiperItem } from "../types";
 
 export const EDUCAITON_LIST: SwiperItem[] = [
-    { title: "Nesbru VGS", img: "src/assets/Nesbru-vgs.png", description: "Studiespesialiserende fag", year: "2013-2016" },
-    { title: "Forsvaret", img: "src/assets/Forsvaret.png", description: "Luftforsvaret", year: "2017-2018" },
+    { title: "OsloMet", img: "src/assets/OsloMet.png", description: "Dataingeniør, bachelor", year: "2019-2022" },
     { title: "NTNU", img: "src/assets/NTNU.png", description: "Forkurs, ingeniør", year: "2018-2019" },
-    { title: "OsloMet", img: "src/assets/OsloMet.png", description: "Dataingeniør, bachelor", year: "2019-2022" }
+    { title: "Forsvaret", img: "src/assets/Forsvaret.png", description: "Luftforsvaret", year: "2017-2018" },
+    { title: "Nesbru VGS", img: "src/assets/Nesbru-vgs.png", description: "Studiespesialiserende fag", year: "2013-2016" },
+
 ];
 
 export const EXPERIENCE_LIST: SwiperItem[] = [
@@ -16,8 +17,7 @@ export const EXPERIENCE_LIST: SwiperItem[] = [
 
 export const LANGUAGES: ColorColumnProps[] = [
     { title: "Norsk", description: "Morsmål", expertise: 100 },
-    { title: "Engelsk", description: "Sidemål", expertise: 80 },
-    { title: "Spansk", description: "Feire", expertise: 20 },
+    { title: "Engelsk", description: "Flytende", expertise: 80 },
 ];
 
 
@@ -30,10 +30,19 @@ export const PROGRAMMING_LANGUAGES: ColorColumnProps[] = [
     { title: "Python", description: "1 års erfaring", expertise: 60 },
 ];
 
+export const FRAMEWORKS: ColorColumnProps[] = [
+    { title: "React", description: "3 års erfaring", expertise: 90 },
+    { title: "React-native", description: "2 års erfaring", expertise: 90 },
+    { title: "Ktor", description: "1 års erfaring", expertise: 70 },
+    { title: "Spring", description: "2 års erfaring", expertise: 70 },
+    { title: "Angular", description: "1 års erfaring", expertise: 60 },
+    { title: "Django", description: "1 års erfaring", expertise: 50 },
+];
+
 
 
 export const ABOUT_DETAILS: AboutDetails[] = [
-    { label: AboutLabels.Age, value: "26" },
+    { label: AboutLabels.Age, value: "Jeg er en 26 år gammel mann som brenner for teknologi og utvikling..." },
     { label: AboutLabels.Education, value: "Dataingeniør" },
     { label: AboutLabels.Experience, value: "2 år som fullstack utvikler" },
     { label: AboutLabels.Languages, value: "Norsk, Engelsk" },
