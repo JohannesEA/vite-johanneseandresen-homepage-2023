@@ -7,25 +7,22 @@
   background-color: rgba(0, 0, 0, 0.5); // Darkened background
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end; // Start at the bottom of the screen
   z-index: 1000; // Ensure it's above other content
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.modal-overlay-open {
-  opacity: 1;
+  visibility: hidden; // By default, the modal is not visible
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .modal {
   background: var(--color-secondary);
   color: var(--color-primary);
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0; // Rounded corners at the top
   width: 90%; // make it flexible
   max-width: 1280px; // maximum size
-  transform: translateY(100%); // Start off-screen
-  transition: transform 0.3s ease-in-out;
   min-height: 80vh;
+  transform: translateY(100%); // Start off-screen
+  transition: transform 0.3s ease-out; // Animate the slide in/out
 }
 
 .modal-header {
@@ -51,21 +48,21 @@
   padding: 1rem;
 }
 
-// New class for the open state of the modal
-.modal-open {
-  transform: translateY(0); // Bring the modal into view
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible; // Make overlay visible
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal.active {
+  transform: translateY(0); // Slide into view
 }
 
 @media (max-width: 1280px) {
   .modal {
-    border-radius: 15px 15px 0 0;
     width: 100%; // full width on small screens
+    border-radius: 15px 15px 0 0; // Adjusted border-radius
     min-height: 90vh;
     max-width: none; // remove max-width constraint on smaller screens
-    bottom: 0;
-    position: fixed; // Fixed position to stay in view
-  }
-  .modal-open {
-    transform: translateY(0);
   }
 }

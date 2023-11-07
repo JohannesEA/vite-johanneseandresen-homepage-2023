@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./About.scss";
 import Modal from "../../../components/modal/Modal";
 import { AboutMeModalContent } from "./AboutMeModalContent";
@@ -16,6 +16,10 @@ const About = () => {
   const [selectedDetails, setSelectedDetails] = useState<AboutDetails | null>(
     null
   );
+
+  useEffect(() => {
+    console.log("Modal should be:", showModal ? "Open" : "Closed");
+  }, [showModal]);
 
   const getAboutModalContent = (label: AboutLabels) => {
     switch (label) {
