@@ -6,16 +6,19 @@ const contactDetails = [
     label: "Epost",
     value: "johannes.erdahl.andresen@gmail.com",
     Icon: "",
+    action: `mailto:johannes.erdahl.andresen@gmail.com`,
   },
   {
     label: "Telefon",
     value: "+47 99 50 90 35",
     Icon: "",
+    action: `tel:+4799509035`,
   },
   {
     label: "Lokasjon",
     value: "Oslo, Norway",
     Icon: "",
+    action: `https://www.google.com/maps/search/?api=1&query=Oslo,Norway`,
   },
 ];
 
@@ -30,7 +33,7 @@ const Contact = () => {
             label={detail.label}
             value={detail.value}
             onClick={() => {
-              alert(detail.label);
+              window.location.href = detail.action;
             }}
           />
         ))}

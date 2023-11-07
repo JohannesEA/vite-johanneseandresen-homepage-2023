@@ -12,6 +12,13 @@ export const AboutMeModalContent = () => {
       <a href="https://github.com/JohannesEA" className="about__button">
         Github
       </a>
+      <a
+        href="src/assets/CV_johannes_2022.pdf"
+        className="about__button"
+        download
+      >
+        Last ned CV
+      </a>
     </div>
   );
 };

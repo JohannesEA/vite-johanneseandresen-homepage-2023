@@ -2,7 +2,8 @@
   text-align: center; // Center the text for title and description
   padding: 20px; // Add some padding around the content
   border-radius: 8px; // Optional: round the corners
-  min-height: 450px;
+  min-height: 300px;
+  max-height: 450px;
   background-color: var(--color-primary); // A light background color
   &__title {
     margin-bottom: 12px; // Space between the title and the image

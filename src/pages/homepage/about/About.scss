@@ -20,6 +20,7 @@
   font-family: var(--font-family-base);
   &__title {
     color: var(--color-primary);
+    margin-bottom: 48px;
   }
   &__container {
     max-width: 960px;
@@ -30,10 +31,13 @@
     text-align: center;
   }
   &__image {
-    width: 120px;
-    height: 120px;
+    max-height: 300px;
+    max-width: 300px;
+    min-height: 200px;
+    min-width: 200px;
+    width: 100%;
     border-radius: 50%;
-    margin-bottom: 2rem;
+    margin-bottom: 48px;
     object-fit: cover; // Maintains aspect ratio and covers the area without stretching the image
     object-position: center;
   }
@@ -45,6 +49,8 @@
     display: inline-block; // Allows setting padding and margins
     padding: 0.75rem 1.5rem; // Sizeable padding for finger-friendly touch
     margin-top: 1rem; // Spacing from the previous element
+    margin-left: 10px;
+    margin-right: 10px;
     background-color: var(--color-primary); // Theme-based background color
     color: var(
       --color-secondary
