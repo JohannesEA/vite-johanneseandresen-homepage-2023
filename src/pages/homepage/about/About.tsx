@@ -37,7 +37,7 @@ const About = () => {
   };
 
   return (
-    <section className="about">
+    <section className="about" id="om">
       <img
         src="/assets/johannes.jpeg"
         alt="Johannes Erdahl Andresen"

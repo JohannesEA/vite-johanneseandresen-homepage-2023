@@ -9,6 +9,12 @@
   justify-content: center;
   align-items: center;
   z-index: 1000; // Ensure it's above other content
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal-overlay-open {
+  opacity: 1;
 }
 
 .modal {
@@ -17,8 +23,8 @@
   border-radius: 8px;
   width: 90%; // make it flexible
   max-width: 1280px; // maximum size
-  transform: translateY(100vh); // Start off-screen
-  transition: transform 0.3s ease-out;
+  transform: translateY(100%); // Start off-screen
+  transition: transform 0.3s ease-in-out;
   min-height: 80vh;
 }
 
@@ -45,19 +51,21 @@
   padding: 1rem;
 }
 
+// New class for the open state of the modal
+.modal-open {
+  transform: translateY(0); // Bring the modal into view
+}
+
 @media (max-width: 1280px) {
   .modal {
-    transform: none;
-    position: fixed;
-    bottom: 0;
     border-radius: 15px 15px 0 0;
-    transition: transform 0.3s ease-out;
     width: 100%; // full width on small screens
     min-height: 90vh;
     max-width: none; // remove max-width constraint on smaller screens
+    bottom: 0;
+    position: fixed; // Fixed position to stay in view
   }
-}
-
-.modal-overlay .modal {
-  transform: translateY(0); // This will bring the modal into view
+  .modal-open {
+    transform: translateY(0);
+  }
 }

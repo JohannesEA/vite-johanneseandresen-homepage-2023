@@ -2,25 +2,43 @@ import React, { useState } from "react";
 import Hamburger from "hamburger-react";
 import useScreenSize from "../../hooks/useScreenSize";
 import "./Navbar.scss";
+import { Link } from "react-scroll";
 
 const Navbar: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
-  const links = ["Hjem", "Om", "Erfaring", "Portfølje", "Kontakt"];
+  const links = ["Om", "Kontakt"];
   const screenSize = useScreenSize();
 
   return (
     <nav className="navbar">
-      <img className="navbar__logo" src="/assets/logo.png" alt="Logo" />
+      <Link
+        activeClass="active"
+        className="navbar__link"
+        to={"om"}
+        spy={true}
+        smooth={true}
+        offset={50}
+        duration={500}
+        onClick={() => setOpen(false)}
+      >
+        <img className="navbar__logo" src="/assets/logo.png" alt="Logo" />
+      </Link>
       {screenSize.width > 500 ? (
         <div className="navbar__links-container">
           {links.map((link, index) => (
-            <a
+            <Link
               key={index}
+              activeClass="active"
               className="navbar__link"
-              href={`#${link.toLowerCase()}`}
+              to={link.toLowerCase()}
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              onClick={() => setOpen(false)}
             >
               {link}
-            </a>
+            </Link>
           ))}
         </div>
       ) : (

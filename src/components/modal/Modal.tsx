@@ -9,11 +9,14 @@ interface ModalProps {
 }
 
 const Modal = ({ title, isOpen, onClose, children }: ModalProps) => {
-  if (!isOpen) return null;
+  const modalClasses = isOpen ? "modal modal-open" : "modal";
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal" onClick={(e) => e.stopPropagation()}>
+    <div
+      className={`modal-overlay ${isOpen ? "modal-overlay-open" : ""}`}
+      onClick={onClose}
+    >
+      <div className={modalClasses} onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h5 className="modal-title">{title ? title : ""}</h5>
           <button className="modal-close" onClick={onClose}>
