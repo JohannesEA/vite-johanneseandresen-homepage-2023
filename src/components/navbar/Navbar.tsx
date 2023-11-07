@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="navbar">
-      <img className="navbar__logo" src="src/assets/logo.png" alt="Logo" />
+      <img className="navbar__logo" src="/assets/logo.png" alt="Logo" />
       {screenSize.width > 500 ? (
         <div className="navbar__links-container">
           {links.map((link, index) => (

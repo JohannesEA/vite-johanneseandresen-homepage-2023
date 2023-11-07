@@ -5,7 +5,7 @@ const Hero = () => {
     <div className="hero">
       <div className="hero__content">
         <img
-          src={"src/assets/logo.png"}
+          src={"/assets/logo.png"}
           alt="Johannes Erdahl Andresen"
           className="hero__image"
         />

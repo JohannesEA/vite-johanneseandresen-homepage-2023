@@ -1,17 +1,17 @@
 import { AboutDetails, AboutLabels, ColorColumnProps, SwiperItem } from "../types";
 
 export const EDUCAITON_LIST: SwiperItem[] = [
-    { title: "OsloMet", img: "src/assets/OsloMet.png", description: "Dataingeniør, bachelor", year: "2019-2022" },
-    { title: "NTNU", img: "src/assets/NTNU.png", description: "Forkurs, ingeniør", year: "2018-2019" },
-    { title: "Forsvaret", img: "src/assets/Forsvaret.png", description: "Luftforsvaret", year: "2017-2018" },
-    { title: "Nesbru VGS", img: "src/assets/Nesbru-vgs.png", description: "Studiespesialiserende fag", year: "2013-2016" },
+    { title: "OsloMet", img: "/assets/OsloMet.png", description: "Dataingeniør, bachelor", year: "2019-2022" },
+    { title: "NTNU", img: "/assets/NTNU.png", description: "Forkurs, ingeniør", year: "2018-2019" },
+    { title: "Forsvaret", img: "/assets/Forsvaret.png", description: "Luftforsvaret", year: "2017-2018" },
+    { title: "Nesbru VGS", img: "/assets/Nesbru-vgs.png", description: "Studiespesialiserende fag", year: "2013-2016" },
 
 ];
 
 export const EXPERIENCE_LIST: SwiperItem[] = [
-    { title: "Aize", img: "src/assets/Aize.png", description: "Summerintern", year: "Sommer 2021" },
-    { title: "Eika", img: "src/assets/Eika.png", description: "Fullstack utvikler", year: "Feb 2022 - " },
-    { title: "Erdahl Andresen IT", img: "src/assets/EAIT.png", description: "Eget firma", year: "August 2022 -" },
+    { title: "Aize", img: "/assets/Aize.png", description: "Summerintern", year: "Sommer 2021" },
+    { title: "Eika", img: "/assets/Eika.png", description: "Fullstack utvikler", year: "Feb 2022 - " },
+    { title: "Erdahl Andresen IT", img: "/assets/EAIT.png", description: "Eget firma", year: "August 2022 -" },
 ];
 
 

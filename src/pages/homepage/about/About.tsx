@@ -39,7 +39,7 @@ const About = () => {
   return (
     <section className="about">
       <img
-        src="src/assets/johannes.jpeg"
+        src="/assets/johannes.jpeg"
         alt="Johannes Erdahl Andresen"
         className="about__image"
       />
