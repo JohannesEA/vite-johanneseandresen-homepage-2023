@@ -4,10 +4,17 @@ import { translations } from "@/utils/translations";
 
 const experiences = [
   {
-    company: "Sonat",
-    period: "01.2025 - Present",
+    company: "Storebrand",
+    period: "01.05.2025 - nå",
     role: "Developer",
-    period_no: "01.2025 - Nå",
+    period_no: "01.05.2025 - now",
+    role_no: "Utvikler",
+  },
+    {
+    company: "Sonat",
+    period: "01.2025 - 30.04.2025",
+    role: "Developer",
+    period_no: "01.2025 - 30.05.2025",
     role_no: "Utvikler",
   },
   {
