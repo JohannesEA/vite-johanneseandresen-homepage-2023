@@ -3,11 +3,18 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/utils/translations";
 
 const experiences = [
+   {
+    company: "Storebrand",
+    period: "05.2025 - Present",
+    role: "Developer",
+    period_no: "05.2025 - Nå",
+    role_no: "Utvikler",
+  },
   {
     company: "Sonat",
-    period: "01.2025 - Present",
+    period: "01.2025 - 05.2025",
     role: "Developer",
-    period_no: "01.2025 - Nå",
+    period_no: "01.2025 - 05.2025",
     role_no: "Utvikler",
   },
   {
