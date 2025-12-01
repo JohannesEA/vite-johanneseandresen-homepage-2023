@@ -13,7 +13,7 @@ const skillCategories = [
   },
   {
     title: "Mobile Development",
-    skills: ["React Native", "Flutter", "Expo", "Firebase"],
+    skills: ["React Native", "Flutter", "Expo"],
   },
   {
     title: "Databases",
@@ -21,7 +21,7 @@ const skillCategories = [
   },
   {
     title: "DevOps & Tools",
-    skills: ["Git", "Azure DevOps", "Docker", "Kubernetes", "CI/CD"],
+    skills: ["Git", "Azure DevOps", "Docker", "Firebase", "Kubernetes", "CI/CD"],
   },
 ];
 

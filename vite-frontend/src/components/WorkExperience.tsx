@@ -3,18 +3,18 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/utils/translations";
 
 const experiences = [
-  {
+   {
     company: "Storebrand",
-    period: "01.05.2025 - nå",
+    period: "05.2025 - Present",
     role: "Developer",
-    period_no: "01.05.2025 - now",
+    period_no: "05.2025 - Nå",
     role_no: "Utvikler",
   },
     {
     company: "Sonat",
-    period: "01.2025 - 30.04.2025",
+    period: "01.2025 - 05.2025",
     role: "Developer",
-    period_no: "01.2025 - 30.05.2025",
+    period_no: "01.2025 - 05.2025",
     role_no: "Utvikler",
   },
   {
@@ -107,15 +107,15 @@ export const WorkExperience = () => {
                       ? "md:mr-[50%] md:pr-12"
                       : "md:ml-[50%] md:pl-12"
                   }`}
-                  initial={{ 
+                  initial={{
                     opacity: 0,
                     x: index % 2 === 0 ? -50 : 50
                   }}
-                  whileInView={{ 
+                  whileInView={{
                     opacity: 1,
                     x: 0
                   }}
-                  transition={{ 
+                  transition={{
                     duration: 0.5,
                     delay: index * 0.1,
                     type: "spring",
